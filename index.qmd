@@ -1,0 +1,149 @@
+---
+title: "Pengaruh Konsumsi Rokok terhadap Tingkat Kemiskinan di Indonesia 2015-2021"
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Tasya Sagita Azzahra"
+date: 2024-01-14
+number-sections: true
+format:
+  html: default
+  docx: default
+---
+
+## Pendahuluan
+
+![](poltekapp.jpg)
+
+### Latar belakang
+
+Indonesia kaya akan Industri-industri yang menyokong pertumbuhan serta keseimbangan ekonomi didalam negara.Dimana seperti yang kita ketahui bahwa terdapat berbagai macam industri yang berperan besar di indonesia diantaranya seperti : industri pertambangan,manufaktur,hiburan dan salah satunya adalah industri pertanian yang berperan penting dalam kehidupan, pembangunan, serta perekonomian Indonesia. Di Indonesia sendiri industri hasil tembakau merupakan salah satu sektor strategis domestik yang memiliki daya saing tinggi serta terus memberikan kontribusi signifikan terhadap perekonomian nasional. dimana salah satu hasil pertaniannya yaitu Tembakau dan Cengkeh, dan tembakau sebagai salah satu bahan yang digunakan dalam pembuatan Rokok. Seperti yang kita ketahui bahwa potensi tingkat konsumsi rokok di indonesia semakin meningkat dari tahun ke tahun,dimana Tidak bisa dipungkiri bahwa rokok masih menjadi salah satu komoditas primadona yang dikonsumsi oleh masyarakat miskin di Indonesia. dan karena inilah Rokok masih menjadi salah satu penyumbang kemiskinan di indonesia karena tingkat konsumsinya yang tinggi. Yang lebih memprihatinkan adalah fakta bahwa “keberhasilan” bisnis rokok di Indonesia “dipercantik” dengan adanya fakta bahwa perokok di Indonesia, di dominasi oleh usia yang masih terbilang muda atau remaja. Hal ini tertera pada Tobacco Control Atlas Asean menunjukan data di mana jumlah perokok di bawah umur di Indonesia sudah terbilang mengkhawatirkan. 30 persen anak Indonesia mulai merokok bahkan sebelum genap berusia 10 tahun. Diperkirakan jumlahnya mencapai 20 juta anak, dan terus naik tiap tahunnya.
+
+### Ruang lingkup
+
+Dalam penelitian ini mengambil objek penelitian berdasarkan Badan Pusat Statistik. Ruang lingkup pembahasan masalah disini sesuai dengan yang akan dibahas yaitu mengenai dampak atau pengaruh dari konsumsi rokok terhadap tingkat kemiskinan di indonesia beserta tahun terkait. Data yang digunakan adalah data yang bersifat time series yaitu dalam kurun waktu 2015 - 2021.
+
+### Rumusan masalah
+
+Berdasarkan uraian latar belakang diatas maka yang menjadi masalah pokok pada penelitian ini adalah:
+
+1.dampak dari konsumsi rokok terhadap tingkat kemiskinan di indonesia
+
+2.mengetahui faktor penyebab dari banyaknya konsumsi atau penggunaan rokok di indonesia
+
+3.pengaruh tingkat konsumsi rokok yang berlebih terhadap kesejahteraan rumah tangga
+
+### Tujuan dan manfaat penelitian
+
+Penelitian ini bertujuan untuk mengetahui pengaruh atau dampak dari banyaknya konsumsi rokok di indonesia terhadap tingkat kemiskinan di indonesia dengan tahun terkait.
+
+Adapun manfaat dari penelitian ini adalah diharapkan dapat memberikan kesadaran pada masyarakat luas terhadap penggunaan atau konsumsi rokok yang berkelangsungan dapat mempengaruhi berbagai aspek, selain aspek rumah tangga , kesehatan, serta konsumsi rokok juga dapat mempengaruhi tingkat kemiskinan di indonesia. penelitian ini.
+
+### Package
+
+```{r}
+library('tidyverse')
+library('readxl')
+library('stringi')
+```
+
+## Studi pustaka
+
+Fakta mengenai sekitar 70% perokok di Indonesia justru berasal dari kalangan keluarga miskin. Bahkan disebutkan bahwa, kegiatan belanja rumah tangga masyarakat miskin untuk rokok menempati urutan ketiga tertinggi setelah makananan siap saji, beras, kesehatan serta pendidikan. Kecenderungan lebih rela mengeluarkan uang dalam jumlah cukup besar hanya untuk rokok dibandingkan untuk biaya peningkatan taraf hidup seakan sudah biasa di kalangan perokok di Indonesia. Rokok sendiri menjadi salah satu penyebab dari kemiskinan dikarenakan tingkat konsumsinya yang tinggi.Pada Rumah tangga masyarakat miskin diketahui menghabiskan rata-rata Rp.286.000 per bulan hanya untuk rokok dibandingkan untuk membeli bahan makanan bergizi bagi anak (Katadata, 14 Desember 2022) Bahkan, konsumsi rokok juga mengalahkan konsumsi protein seperti telur dan ayam. “Konsumsi rokok merupakan konsumsi kedua terbesar dari rumah tangga miskin yaitu mencapai 12,21 persen untuk masyarakat miskin perkotaan dan 11,63 persen untuk masyarakat pedesaan," ujar Sri Mulyani sebagaimana dilansir dari siaran pers Sekretariat Presiden pada Kamis (4/11/2022). Dampak dari aktivitas merokok selain terhadap kemiskinan juga meningkatkan risiko penyakit kardiovaskular dimana penyakit ini mengakibatkan adanya gangguan jantung dan pembuluh darah pada penderitanya. Sejauh ini, kardiovaskular banyak diderita oleh masyarakat di negara yang berpendapatan rendah. Sementara itu, di Indonesia sendiri penyakit kardiovaskular mencapai sekitar 80 persen. Kemudian, menurut (Institute for Health Metrix and Evolution pada tahun 2019) melaporkan rokok tembakau beresiko meningkatkan risiko kanker trakea, bronkus, dan paru-paru sebesar 59,6%, 59% mengakibatkan penyakit paru obstruksi kronik, 28% memicu gangguan jantung, dan 19% mengakibatkan diabetes mellitus. Adapun alasan remaja memulai perilaku merokok adalah untuk mengetahui rasa rokok (24%). lalu (13,3%) responden menyatakan mendapatkan perasaan nyaman setelah merokok. Faktor pembentukan imej juga berperan dalam perilaku merokok dimana (8%) responden merasa memiliki imej dewasa dan menunjukkan kematangan dengan melakukan perilaku merokok. Pada usia remaja awal (11-15 tahun), rasa ingin tahu merupakan alasan utama remaja melakukan perilaku merokok, sedangkan pada remaja tengah usia (15-18 tahun) faktor yang paling dominan adalah karena melihat teman merokok dan merasa ingin mencobanya juga.
+
+## Metode penelitian
+
+### Data
+
+| Tahun | x      | y    |
+|-------|--------|------|
+| 2015  | 348.10 | 0.37 |
+| 2016  | 341.70 | 0.52 |
+| 2017  | 336.30 | 0.32 |
+| 2018  | 331.90 | 0.37 |
+| 2019  | 356.50 | 0.21 |
+| 2020  | 322.00 | 0.36 |
+| 2021  | 9.98   | 0.39 |
+
+Berdasarkan Tabel diatas , diketahui x (Konsumsi Rokok),y (Tingkat Kemiskinan).
+
+Penelitian ini menggunakan data sekunder dengan bentuk data time series 2015-2021, data yang dipakai ialah data yang telah diolah dengan sumber Badan Pusat Statistik
+
+```{r}
+setwd("C:/metopen/latihan 1/R-sya metopen")
+library('readxl')
+library('tidyverse')
+readxl::read_excel('C:/metopen/latihan 1/R-sya metopen/Excel tasya.xlsx')->dat
+plot(dat$x,dat$y,xlab="konsumsi rokok",ylab="tingkat kemiskinan")
+```
+
+```{r}
+library('readxl')
+readxl::read_excel('C:/metopen/latihan 1/R-sya metopen/Excel tasya.xlsx')->dat
+reg1<-lm(y~x,data=dat)
+dat$u<-resid(reg1) # generate error
+plot(dat$y,dat$u,xlab="tingkat kemiskinan",ylab="error") # plot error vs y
+abline(h=0)
+```
+
+```{r}
+library('readxl')
+readxl::read_excel('C:/metopen/latihan 1/R-sya metopen/Excel tasya.xlsx')->dat
+reg1<-lm(y~x,data=dat)
+dat$u<-resid(reg1) # generate error
+plot(dat$x,dat$u,xlab="konsumsi Rokok",ylab="error") # plot error vs x
+abline(h=0)
+```
+
+### Metode analisis
+
+Metode yang dipilih adalah regresi univariat atau Ordinary Least Square (OLS) dengan 1 variabel independen. Penelitian ini bermaksud mencari hubungan antara KONSUMSI ROKOK(KR) dan TINGKAT KEMISKINAN DI INDONESIA(TK). Spesifikasi yang dilakukan adalah:
+
+$$
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+$$ di mana $y_t$ adalah (TK) dan $x_t$ adalah (KR).
+
+## Pembahasan
+
+### Pembahasan masalah
+
+### Analisis masalah
+
+Hasil regresinya adalah
+
+```{r}
+library('readxl')
+readxl::read_excel('C:/metopen/latihan 1/R-sya metopen/Excel tasya.xlsx')->dat
+head(dat)
+```
+
+```{r}
+reg1<-lm(y~x,data=dat)
+summary(reg1)
+```
+
+## Kesimpulan
+
+Setelah dilakukan penelitian berdasarkan tahun terkait, dan hasil regresi maka dapat disimpulkan bahwa:
+
+1.tingkat konsumsi rokok di Indonesia masih terbilang mengkhawatirkan sehingga masih diperlukannya Kebijakan ketat baik dari pemerintah ataupun kesadaran diri sendiri. Terutama untuk anak muda yang mendominasi perokok aktif di Indonesia saat ini, mengesampingkan rasa ingin tahu terhadap rasa rokok serta berbagai dampak positif yang dirasakan pada anak muda saat ini, rokok merupakan sesuatu yang harus ditakar penggunaannya. Bukan hanya sebagai penghindaran dari berbagai macam penyakit namun juga dikarenakan Tingkat kemiskinan yang semakin bertambah hanya karena lebih banyak orang yang menggunakan uangnya hanya untuk membeli rokok dibanding untuk memenuhi kebutuhan hidup mereka.
+
+2.Tingkat konsumsi rokok di Indonesia juga mempengaruhi Tingkat kemiskinan dalam negri, Dimana hal ini juga terbilang mengkhawatirkan apalagi setelah dilakukan riset atau penelitian terhadap dampak dari konsumsi rokok didapatkan fakta bahwa Masyarakat golongan bawah ( miskin ) mendominasi tingkat konsumsi rokok di Indonesia. Bahkan disebutkan bahwa, kegiatan belanja rumah tangga masyarakat miskin untuk rokok menempati urutan ketiga tertinggi setelah makananan siap saji, beras, kesehatan serta pendidikan. Hal ini perlu dipikirkan oleh Masyarakat luas bahwa pengaruh dari konsumsi rokok begitu berdampak terhadap pertumbuhan ekonomi di Indonesia, dan seperti yang kita ketahui bahwa satu-satunya cara untuk mencegah atau mengurangi dampak kemiskinan akibat rokok ini adalah tak lain yang paling utama adalah kesadaran diri sendiri dalam Masyarakat luas terhadap konsumsi rokok tersebut. Memperketat kebijakan pemerintah terhadap penjualan rokok di Indonesia juga perlu ditingkatkan karena bisa saja banyaknya konsumsi rokok di Indonesia saat ini dikarenakan harga untuk rokok tersebut masih terbilang murah, sehingga Masyarakat masih mampu untuk membelinya bahkan untuk Masyarakat golongan rendah(miskin).
+
+## Referensi
+
+<https://yankes.kemkes.go.id/view_artikel/2066/konsumsi-rokok-menyumbang-kemiskinan-di-indonesia>
+
+<https://barrukab.beta.bps.go.id/id/statistics-table/2/ODMjMg==/tingkat-keparahan-kemiskinan.html>
+
+<https://databoks.katadata.co.id/datapublish/2022/01/03/persentase-perokok-usia-15-19-tahun-turun-pada-2021>
+
+<https://databoks.katadata.co.id/datapublish/2021/12/15/berapa-jumlah-konsumsi-rokok-masyarakat-indonesia-per-tahun>
+
+<https://goodstats.id/article/angka-konsumsi-rokok-di-indonesia-masih-menjadi-sorotan-jemUs>
+
+<https://nasional.kompas.com/read/2022/11/03/20575711/menkeu-sebut-konsumsi-rokok-di-indonesia-lebih-tinggi-dari-protein>
+
+<https://yankes.kemkes.go.id/view_artikel/2871/perokok-muda>
+
+<https://www.tribunnews.com/bisnis/2023/01/12/kemenperin-sebut-industri-hasil-tembakau-berperan-penting-dalam-peningkatan-ekonomi-indonesia>
+
+<https://kemenperin.go.id/artikel/17257/Kontribusi-Besar-Industri-Hasil-Tembakau-Bagi-Ekonomi-Nasional>
